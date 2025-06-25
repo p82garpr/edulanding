@@ -1,0 +1,360 @@
+.user-types {
+  background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+  position: relative;
+}
+
+.user-types-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Tabs */
+.user-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.user-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: var(--gray-700);
+}
+
+.user-tab:hover {
+  border-color: var(--blue-300);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.user-tab.active {
+  background: linear-gradient(135deg, var(--blue-500), var(--blue-600));
+  border-color: var(--blue-600);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.tab-icon {
+  font-size: 1.5rem;
+}
+
+.tab-text {
+  font-weight: 600;
+}
+
+/* User Content */
+.user-content {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.user-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.user-icon {
+  font-size: 4rem;
+  background: linear-gradient(135deg, var(--blue-100), var(--blue-200));
+  padding: 1.5rem;
+  border-radius: 50%;
+  border: 3px solid var(--blue-300);
+}
+
+.user-info {
+  text-align: left;
+}
+
+.user-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--blue-900);
+  margin-bottom: 0.5rem;
+}
+
+.user-subtitle {
+  font-size: 1.25rem;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+/* Feature Cards */
+.user-features {
+  margin-bottom: 4rem;
+}
+
+.user-feature-card {
+  border: 1px solid var(--gray-200);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.user-feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--blue-400), var(--blue-600));
+  transform: scaleX(0);
+  transition: transform var(--transition-normal);
+}
+
+.user-feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.user-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--blue-200);
+}
+
+.user-feature-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.user-feature-icon {
+  font-size: 2rem;
+  background: linear-gradient(135deg, var(--blue-50), var(--blue-100));
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--blue-200);
+}
+
+.user-feature-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--blue-900);
+  margin: 0;
+}
+
+.user-feature-description {
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.user-feature-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--gray-700);
+}
+
+.benefit-check {
+  color: var(--blue-500);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.benefit-text {
+  font-weight: 500;
+}
+
+/* Workflow */
+.user-workflow {
+  background: var(--white);
+  padding: 3rem;
+  border-radius: 2rem;
+  border: 1px solid var(--gray-200);
+  box-shadow: var(--shadow-md);
+}
+
+.workflow-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--blue-900);
+  margin-bottom: 2rem;
+}
+
+.workflow-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.workflow-step {
+  text-align: center;
+  max-width: 200px;
+  flex: 1;
+  min-width: 150px;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--blue-500), var(--blue-600));
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 1rem auto;
+  box-shadow: var(--shadow-md);
+}
+
+.step-content h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--blue-900);
+  margin-bottom: 0.5rem;
+}
+
+.step-content p {
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.workflow-arrow {
+  font-size: 2rem;
+  color: var(--blue-400);
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .user-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .user-info {
+    text-align: center;
+  }
+
+  .user-icon {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+
+  .user-title {
+    font-size: 2rem;
+  }
+
+  .user-subtitle {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-tab {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .user-icon {
+    font-size: 2.5rem;
+    padding: 0.875rem;
+  }
+
+  .user-title {
+    font-size: 1.75rem;
+  }
+
+  .user-subtitle {
+    font-size: 1rem;
+  }
+
+  .user-workflow {
+    padding: 2rem;
+  }
+
+  .workflow-title {
+    font-size: 1.5rem;
+  }
+
+  .workflow-steps {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .workflow-arrow {
+    transform: rotate(90deg);
+    font-size: 1.5rem;
+  }
+
+  .workflow-step {
+    max-width: 100%;
+  }
+
+  .step-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+
+  .user-feature-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .user-feature-icon {
+    font-size: 1.75rem;
+    padding: 0.5rem;
+    align-self: center;
+  }
+
+  .user-feature-title {
+    font-size: 1.125rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* Animation delays for feature cards */
+.user-feature-card {
+  animation-fill-mode: both;
+}
+
+.user-feature-card:nth-child(1) { animation-delay: 0.1s; }
+.user-feature-card:nth-child(2) { animation-delay: 0.2s; }
+.user-feature-card:nth-child(3) { animation-delay: 0.3s; }
+.user-feature-card:nth-child(4) { animation-delay: 0.4s; } 
