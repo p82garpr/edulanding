@@ -21,28 +21,28 @@ const Hero = () => {
             <h1 className="hero-title">
               <span className="hero-title-main">EduCode.AI</span>
               <span className="hero-title-subtitle">
-                Inteligencia Artificial para la Educación
+                Inteligencia Artificial aplicada a la educación
               </span>
             </h1>
             
             <p className="hero-description">
               Una aplicación móvil revolucionaria que utiliza inteligencia artificial 
-              para la corrección automática de ejercicios de programación, facilitando 
+              para la corrección automática de ejercicios de todo tipo, facilitando 
               el trabajo del profesorado y mejorando la experiencia de aprendizaje del alumnado.
             </p>
 
             <div className="hero-features-preview">
               <div className="feature-badge">
                 <span className="feature-icon">🔍</span>
-                <span>OCR Avanzado</span>
+                <span>OCR</span>
               </div>
               <div className="feature-badge">
                 <span className="feature-icon">🤖</span>
-                <span>IA Evaluadora</span>
+                <span>LLM</span>
               </div>
               <div className="feature-badge">
                 <span className="feature-icon">📱</span>
-                <span>Móvil First</span>
+                <span>Evaluación automática</span>
               </div>
             </div>
             
@@ -51,10 +51,10 @@ const Hero = () => {
                 className="btn btn-primary btn-large animate-pulse"
                 onClick={scrollToFeatures}
               >
-                Descubrir Características
+                Descubrir características
               </button>
               <button 
-                className="btn btn-secondary btn-large"
+                className="btn btn-secondary btn-large animate-fadeInUp"
                 onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
               >
                 Acerca del Proyecto
@@ -80,7 +80,7 @@ const Hero = () => {
                       </div>
                       <div className="evaluation-result">
                         <div className="result-icon">✓</div>
-                        <div className="result-text">Evaluado por IA</div>
+                        <div className="result-text">Evaluado con IA</div>
                       </div>
                     </div>
                   </div>
@@ -90,15 +90,15 @@ const Hero = () => {
               <div className="floating-elements">
                 <div className="floating-card ai-card">
                   <span className="card-icon">🧠</span>
-                  <span className="card-text">IA Evaluadora</span>
+                  <span className="card-text">LLM Evaluador</span>
                 </div>
                 <div className="floating-card ocr-card">
                   <span className="card-icon">📸</span>
-                  <span className="card-text">OCR Scanner</span>
+                  <span className="card-text">Image to Text mediante OCR</span>
                 </div>
                 <div className="floating-card feedback-card">
                   <span className="card-icon">💬</span>
-                  <span className="card-text">Feedback Inteligente</span>
+                  <span className="card-text">Feedback personalizado</span>
                 </div>
               </div>
             </div>
