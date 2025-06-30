@@ -80,6 +80,13 @@ const Hero = () => {
                         <div className="code-line short"></div>
                         <div className="code-line"></div>
                         <div className="code-line medium"></div>
+                        <div className="code-line"></div>
+                        <div className="code-line"></div>
+                        <div className="code-line short"></div>
+                        <div className="code-line medium"></div>
+                        <div className="code-line"></div>
+                        <div className="code-line"></div>
+                        <div className="code-line short"></div>
                       </div>
                       <div className="evaluation-result">
                         <div className="result-icon">✓</div>

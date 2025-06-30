@@ -86,7 +86,7 @@ const ProductShowcase = () => {
         {/* Video Demo Section */}
         <div className="demo-section animate-fadeInUp">
           <div className="section-header">
-            <h2>Demostración en Vivo</h2>
+            <h2>Demostración</h2>
             <p>Ve cómo funciona EduCode.AI en acción</p>
           </div>
           
