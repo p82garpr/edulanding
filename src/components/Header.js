@@ -27,7 +27,8 @@ const Header = () => {
       <div className="container">
         <nav className="nav">
           <div className="nav-brand">
-            <h2 className="logo">EduCode.AI</h2>
+            <img src="/logos/logo-educode.png" alt="EduCode.AI" className="nav-logo" />
+            <span className="nav-brand-text">EduCode.AI</span>
           </div>
           
           <ul className={`nav-menu ${isMobileMenuOpen ? 'nav-menu-open' : ''}`}>

@@ -11,12 +11,6 @@ const UserTypes = () => {
       subtitle: 'Herramientas avanzadas para simplificar la docencia',
       features: [
         {
-          icon: '📚',
-          title: 'Gestión de Asignaturas',
-          description: 'Cree y administre sus cursos de programación de manera sencilla y organizada.',
-          benefits: ['Organización intuitiva', 'Configuración flexible', 'Gestión centralizada']
-        },
-        {
           icon: '🤖',
           title: 'Evaluación Automatizada',
           description: 'Las entregas de los estudiantes son evaluadas automáticamente por IA en base a criterios personalizados.',
@@ -51,7 +45,7 @@ const UserTypes = () => {
           icon: '💬',
           title: 'Retroalimentación Detallada',
           description: 'Reciba sugerencias específicas para mejorar su código, adaptadas a su nivel de aprendizaje.',
-          benefits: ['Comentarios específicos', 'Sugerencias pedagógicas', 'Mejora continua']
+          benefits: ['Comentarios específicos', 'Evaluación a medida', 'Mejora continua']
         },
         {
           icon: '📈',
@@ -59,12 +53,6 @@ const UserTypes = () => {
           description: 'Visualice su progreso y áreas de mejora con métricas personalizadas.',
           benefits: ['Progreso visual', 'Áreas de mejora', 'Motivación constante']
         },
-        {
-          icon: '🎯',
-          title: 'Aprendizaje Adaptativo',
-          description: 'El sistema se adapta a su ritmo de aprendizaje proporcionando ejercicios personalizados.',
-          benefits: ['Ritmo personalizado', 'Dificultad adaptada', 'Aprendizaje eficiente']
-        }
       ]
     }
   };
@@ -142,15 +130,15 @@ const UserTypes = () => {
                 <div className="workflow-step">
                   <div className="step-number">1</div>
                   <div className="step-content">
-                    <h4>Crear Asignatura</h4>
-                    <p>Configure su curso con criterios de evaluación personalizados</p>
+                    <h4>Crear actividad</h4>
+                    <p>Configure su actividad con criterios de evaluación personalizados</p>
                   </div>
                 </div>
                 <div className="workflow-arrow">→</div>
                 <div className="workflow-step">
                   <div className="step-number">2</div>
                   <div className="step-content">
-                    <h4>Monitorear Entregas</h4>
+                    <h4>Monitorear entregas</h4>
                     <p>La IA evalúa automáticamente las soluciones de los estudiantes</p>
                   </div>
                 </div>
@@ -158,8 +146,8 @@ const UserTypes = () => {
                 <div className="workflow-step">
                   <div className="step-number">3</div>
                   <div className="step-content">
-                    <h4>Revisar Resultados</h4>
-                    <p>Acceda a métricas detalladas y exporte calificaciones</p>
+                    <h4>Revisar resultados</h4>
+                    <p>Acceda a métricas detalladas y exporte calificaciones en formato CSV</p>
                   </div>
                 </div>
               </>
@@ -168,7 +156,7 @@ const UserTypes = () => {
                 <div className="workflow-step">
                   <div className="step-number">1</div>
                   <div className="step-content">
-                    <h4>Subir Ejercicio</h4>
+                    <h4>Subir ejercicio</h4>
                     <p>Tome una foto de su código o suba una imagen</p>
                   </div>
                 </div>
@@ -184,7 +172,7 @@ const UserTypes = () => {
                 <div className="workflow-step">
                   <div className="step-number">3</div>
                   <div className="step-content">
-                    <h4>Recibir Feedback</h4>
+                    <h4>Recibir feedback</h4>
                     <p>Obtenga retroalimentación detallada y sugerencias</p>
                   </div>
                 </div>

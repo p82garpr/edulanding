@@ -16,12 +16,6 @@ const Features = () => {
       details: ['Modelos LLM optimizados', 'Evaluación contextual', 'Criterios personalizables']
     },
     {
-      icon: '💬',
-      title: 'Retroalimentación Personalizada',
-      description: 'Comentarios específicos y sugerencias de mejora adaptadas al nivel y progreso de cada estudiante.',
-      details: ['Feedback detallado', 'Sugerencias de mejora', 'Orientación pedagógica']
-    },
-    {
       icon: '⚡',
       title: 'Procesamiento en Tiempo Real',
       description: 'Evaluación instantánea que permite a los estudiantes recibir feedback inmediato sobre sus ejercicios.',
@@ -33,12 +27,6 @@ const Features = () => {
       description: 'Visualización del avance académico con métricas detalladas y reportes comprehensivos para profesores y estudiantes.',
       details: ['Métricas detalladas', 'Reportes automáticos', 'Exportación CSV']
     },
-    {
-      icon: '🔒',
-      title: 'Seguridad y Respaldos',
-      description: 'Sistema robusto de copias de seguridad que garantiza la protección de todos los datos y trabajos realizados.',
-      details: ['Copias automáticas', 'Protección de datos', 'Recuperación garantizada']
-    }
   ];
 
   return (
@@ -84,7 +72,7 @@ const Features = () => {
           <div className="highlight-content">
             <div className="highlight-text">
               <h3 className="highlight-title">
-                Modernización del Entorno Educativo
+                Modernización del entorno educativo
               </h3>
               <p className="highlight-description">
                 EduCode busca contribuir a la modernización del entorno educativo, 

@@ -150,26 +150,33 @@
   gap: 1.5rem;
 }
 
-.stat-item {
+.features-highlight .stat-item {
   text-align: center;
   background: rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
   border-radius: 1rem;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--white) !important;
 }
 
-.stat-number {
+.features-highlight .stat-item * {
+  color: var(--white) !important;
+}
+
+.features-highlight .stat-number {
   font-size: 2.5rem;
   font-weight: 900;
   line-height: 1;
   margin-bottom: 0.5rem;
+  color: var(--white) !important;
 }
 
-.stat-label {
+.features-highlight .stat-label {
   font-size: 0.875rem;
   opacity: 0.8;
   font-weight: 500;
+  color: var(--white) !important;
 }
 
 /* Responsive Design */
@@ -184,12 +191,13 @@
     justify-content: space-around;
   }
 
-  .stat-item {
+  .features-highlight .stat-item {
     padding: 1rem;
   }
 
-  .stat-number {
+  .features-highlight .stat-number {
     font-size: 2rem;
+    color: var(--white) !important;
   }
 }
 
@@ -220,16 +228,18 @@
     gap: 1rem;
   }
 
-  .stat-item {
+  .features-highlight .stat-item {
     padding: 1rem;
   }
 
-  .stat-number {
+  .features-highlight .stat-number {
     font-size: 1.75rem;
+    color: var(--white) !important;
   }
 
-  .stat-label {
+  .features-highlight .stat-label {
     font-size: 0.75rem;
+    color: var(--white) !important;
   }
 
   .feature-icon-large {

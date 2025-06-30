@@ -8,6 +8,45 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <h2 className="section-title">Trabajo de Fin de Grado</h2>
+            
+            <div className="academic-info">
+              <div className="academic-logos">
+                <div className="logo-container university-logo">
+                  <img src="/logos/logo-uco.png" alt="Universidad de Córdoba" className="academic-logo" />
+                  <span className="logo-label">Universidad de Córdoba</span>
+                </div>
+                <div className="logo-container project-logo">
+                  <img src="/logos/logo-educode.png" alt="EduCode.AI" className="academic-logo" />
+                  <span className="logo-label">EduCode.AI</span>
+                </div>
+              </div>
+              
+              <div className="academic-details">
+                <div className="academic-detail">
+                  <span className="detail-label">Carrera:</span>
+                  <span className="detail-value">Ingeniería Informática</span>
+                </div>
+                <div className="academic-detail">
+                  <span className="detail-label">Especialidad:</span>
+                  <span className="detail-value">Ingeniería del Software</span>
+                </div>
+                <div className="academic-detail">
+                  <span className="detail-label">Universidad:</span>
+                  <span className="detail-value">Universidad de Córdoba (UCO)</span>
+                </div>
+                <div className="academic-detail">
+                  <span className="detail-label">Nota:</span>
+                  <span className="detail-value">10/10 (Optando a matricula de honor)</span>
+                </div>
+                <div className="academic-detail">
+                  <span className="detail-label">Repositorio:</span>
+                  <a href="https://github.com/p82garpr/eduCode.AI" target="_blank" rel="noopener noreferrer" className="detail-link">
+                    github.com/p82garpr/eduCode.AI
+                  </a>
+                </div>
+              </div>
+            </div>
+
             <div className="about-description">
               <p>
                 <strong>EduCode.AI</strong> es un Trabajo de Fin de Grado que tiene como objetivo 
@@ -88,12 +127,6 @@ const About = () => {
                 <div className="stat-value">5+</div>
                 <div className="stat-description">Gemini, GPT, Ollama</div>
               </div>
-
-              <div className="stat-item">
-                <div className="stat-label">Arquitectura</div>
-                <div className="stat-value">100%</div>
-                <div className="stat-description">Escalable y Robusta</div>
-              </div>
             </div>
 
             <div className="tech-features">
@@ -106,44 +139,14 @@ const About = () => {
                 <li>📊 Métricas detalladas de progreso</li>
                 <li>🌐 API escalable con FastAPI</li>
                 <li>🗄️ Base de datos PostgreSQL</li>
-                <li>🐳 Containerización con Docker</li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div className="project-impact">
-          <div className="impact-content">
-            <h3 className="impact-title">Impacto Esperado</h3>
-            <div className="impact-grid grid grid-3">
-              <div className="impact-item">
-                <div className="impact-icon">👨‍🏫</div>
-                <h4>Para Educadores</h4>
-                <p>
-                  Reducción significativa del tiempo dedicado a corrección manual, 
-                  permitiendo mayor enfoque en la pedagogía y atención personalizada.
-                </p>
-              </div>
-              <div className="impact-item">
-                <div className="impact-icon">👨‍🎓</div>
-                <h4>Para Estudiantes</h4>
-                <p>
-                  Feedback inmediato y detallado que mejora el proceso de aprendizaje 
-                  y permite identificar áreas de mejora de forma instantánea.
-                </p>
-              </div>
-              <div className="impact-item">
-                <div className="impact-icon">🏫</div>
-                <h4>Para Instituciones</h4>
-                <p>
-                  Modernización de procesos educativos con tecnología de vanguardia 
-                  que demuestra el potencial de la IA en educación.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+      
 
+        {/* Conclusion 
         <div className="about-conclusion">
           <div className="conclusion-content">
             <h3 className="conclusion-title">Conclusión</h3>
@@ -155,6 +158,37 @@ const About = () => {
               donde la tecnología y la pedagogía trabajan en armonía para crear 
               experiencias de aprendizaje más efectivas y personalizadas.
             </p>
+          </div>
+        </div>
+        */}
+
+        <div className="opensource-section">
+          <div className="opensource-content">
+            <h3 className="opensource-title">Proyecto Open Source</h3>
+            <p className="opensource-description">
+              El código completo de EduCode.AI está disponible públicamente en GitHub, 
+              incluyendo tanto el frontend (Flutter) como el backend (FastAPI). 
+              Esto permite a la comunidad académica revisar, contribuir y adaptar 
+              el proyecto según sus necesidades educativas.
+            </p>
+            <div className="github-info">
+              <div className="github-icon">⭐</div>
+              <div className="github-details">
+                <h4>Acceso al Repositorio</h4>
+                <a 
+                  href="https://github.com/p82garpr/eduCode.AI" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="github-link"
+                >
+                  <span className="github-url">github.com/p82garpr/eduCode.AI</span>
+                  <span className="external-icon">↗</span>
+                </a>
+                <p className="repo-description">
+                  68 commits • Flutter + Python • Documentación completa
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

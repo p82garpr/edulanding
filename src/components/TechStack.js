@@ -8,10 +8,10 @@ const TechStack = () => {
       icon: '👁️',
       description: 'Múltiples modelos de OCR evaluados para digitalización precisa',
       techs: [
-        { name: 'Qwen 7B', type: 'LLM con OCR', color: 'var(--blue-500)' },
-        { name: 'Qwen 3B', type: 'Modelo compacto', color: 'var(--blue-600)' },
-        { name: 'Gemma 3', type: 'IA especializada', color: 'var(--blue-700)' },
-        { name: 'Azure Computer Vision', type: 'OCR empresarial', color: 'var(--blue-800)' }
+        { name: 'Qwen 7B', type: 'LLM con visión', color: 'var(--blue-500)' },
+        { name: 'Qwen 3B', type: 'LLM más compacto', color: 'var(--blue-600)' },
+        { name: 'Gemma 3', type: 'LLM de Google', color: 'var(--blue-700)' },
+        { name: 'Azure Computer Vision', type: 'OCR puro de Microsoft', color: 'var(--blue-800)' }
       ]
     },
     {
@@ -19,10 +19,9 @@ const TechStack = () => {
       icon: '🧠',
       description: 'Large Language Models para evaluación inteligente',
       techs: [
-        { name: 'Google Gemini', type: 'LLM avanzado', color: 'var(--blue-500)' },
-        { name: 'GPT', type: 'Modelo de OpenAI', color: 'var(--blue-600)' },
+        { name: 'Google Gemini', type: 'LLM de Google gratis', color: 'var(--blue-500)' },
+        { name: 'GPT', type: 'LLM de OpenAI de pago', color: 'var(--blue-600)' },
         { name: 'Ollama', type: 'Local deployment', color: 'var(--blue-700)' },
-        { name: 'DeepSeek Coder', type: 'Especializado en código', color: 'var(--blue-800)' }
       ]
     },
     {
@@ -33,7 +32,6 @@ const TechStack = () => {
         { name: 'Flutter', type: 'Frontend móvil', color: 'var(--blue-500)' },
         { name: 'FastAPI', type: 'Backend API', color: 'var(--blue-600)' },
         { name: 'PostgreSQL', type: 'Base de datos', color: 'var(--blue-700)' },
-        { name: 'Docker', type: 'Containerización', color: 'var(--blue-800)' }
       ]
     }
   ];
@@ -41,19 +39,19 @@ const TechStack = () => {
   const aiModels = [
     {
       name: 'OCR Service',
-      description: 'Servicio de reconocimiento óptico configurable',
+      description: 'Servicio de reconocimiento óptico',
       values: ['qwen7b', 'qwen3b', 'gemma3', 'azure'],
       icon: '📸'
     },
     {
       name: 'Model IA',
-      description: 'Motor de evaluación inteligente',
+      description: 'Motor de evaluación basado en LLMs',
       values: ['gemini', 'gpt', 'ollama'],
       icon: '🤖'
     },
     {
       name: 'Ollama Models',
-      description: 'Modelos locales especializados',
+      description: 'Modelos locales especializados, fácilmente extendibles',
       values: ['gemma3:12b', 'deepseek-coder-v2:latest'],
       icon: '💻'
     }
@@ -131,6 +129,117 @@ const TechStack = () => {
           </div>
         </div>
 
+        {/* Backend Modular Architecture */}
+        <div className="backend-architecture">
+          <div className="architecture-content">
+            <h3 className="architecture-title">Arquitectura Modular del Backend</h3>
+            <p className="architecture-subtitle">
+              Diseño escalable que separa las operaciones básicas de las funcionalidades de IA 
+              para optimizar recursos y permitir flexibilidad en el despliegue
+            </p>
+
+            <div className="architecture-diagram">
+              <div className="api-modules grid grid-2">
+                <div className="api-module basic-api">
+                  <div className="module-header">
+                    <div className="module-icon">🔧</div>
+                    <h4 className="module-title">API Básica</h4>
+                    <span className="module-badge lightweight">Ligera</span>
+                  </div>
+                  <div className="module-content">
+                    <p className="module-description">
+                      Gestiona las operaciones fundamentales del sistema con pocos recursos
+                    </p>
+                    <ul className="module-features">
+                      <li>✓ Autenticación de usuarios</li>
+                      <li>✓ Gestión de asignaturas</li>
+                      <li>✓ Base de datos PostgreSQL</li>
+                      <li>✓ Manejo de sesiones</li>
+                      <li>✓ Endpoints REST básicos</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="api-module ai-api">
+                  <div className="module-header">
+                    <div className="module-icon">🤖</div>
+                    <h4 className="module-title">API de IA</h4>
+                    <span className="module-badge advanced">Avanzada</span>
+                  </div>
+                  <div className="module-content">
+                    <p className="module-description">
+                      Procesa las tareas de inteligencia artificial de forma independiente
+                    </p>
+                    <ul className="module-features">
+                      <li>✓ Procesamiento OCR</li>
+                      <li>✓ Evaluación con LLMs</li>
+                      <li>✓ Modelos locales (Ollama)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="architecture-benefits">
+                <h4 className="benefits-subtitle">Ventajas de la Arquitectura Modular</h4>
+                <div className="benefits-list grid grid-3">
+                  <div className="benefit-card">
+                    <div className="benefit-icon">💡</div>
+                    <h5>Escalabilidad Inteligente</h5>
+                    <p>Permite escalar solo el módulo de IA cuando hay mayor demanda de procesamiento</p>
+                  </div>
+                  <div className="benefit-card">
+                    <div className="benefit-icon">⚖️</div>
+                    <h5>Distribución de Carga</h5>
+                    <p>Alivia la carga del backend principal manteniendo las operaciones básicas ágiles</p>
+                  </div>
+                  <div className="benefit-card">
+                    <div className="benefit-icon">🔄</div>
+                    <h5>Flexibilidad de Despliegue</h5>
+                    <p>Opción de usar modelos locales o APIs externas según los recursos disponibles</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="deployment-options">
+                <h4 className="deployment-title">Opciones de Despliegue</h4>
+                <div className="deployment-scenarios">
+                  <div className="scenario low-resources">
+                    <div className="scenario-header">
+                      <span className="scenario-icon">📱</span>
+                      <h5>Recursos Limitados</h5>
+                    </div>
+                    <div className="scenario-content">
+                      <p><strong>API Básica</strong> + <strong>APIs Externas</strong></p>
+                      <ul>
+                        <li>• ChatGPT / Gemini para evaluación</li>
+                        <li>• Azure OCR para reconocimiento</li>
+                        <li>• Mínimos recursos del servidor</li>
+                        <li>• Arranque rápido del sistema</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="scenario high-resources">
+                    <div className="scenario-header">
+                      <span className="scenario-icon">🖥️</span>
+                      <h5>Recursos Abundantes</h5>
+                    </div>
+                    <div className="scenario-content">
+                      <p><strong>API Básica</strong> + <strong>API IA Local</strong></p>
+                      <ul>
+                        <li>• Modelos Ollama en servidor</li>
+                        <li>• Procesamiento local completo</li>
+                        <li>• Mayor control y privacidad</li>
+                        <li>• Independencia de servicios externos</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="tech-workflow">
           <h3 className="workflow-tech-title">Flujo de Procesamiento</h3>
           <div className="processing-flow">
@@ -174,41 +283,7 @@ const TechStack = () => {
           </div>
         </div>
 
-        <div className="tech-benefits">
-          <div className="benefits-content">
-            <h3 className="benefits-title">Ventajas Técnicas</h3>
-            <div className="benefits-grid grid grid-2">
-              <div className="benefit-item">
-                <div className="benefit-icon">⚡</div>
-                <div className="benefit-text">
-                  <h4>Alto Rendimiento</h4>
-                  <p>Procesamiento optimizado para respuestas rápidas</p>
-                </div>
-              </div>
-              <div className="benefit-item">
-                <div className="benefit-icon">🔧</div>
-                <div className="benefit-text">
-                  <h4>Configurabilidad</h4>
-                  <p>Adaptable a diferentes necesidades educativas</p>
-                </div>
-              </div>
-              <div className="benefit-item">
-                <div className="benefit-icon">📈</div>
-                <div className="benefit-text">
-                  <h4>Escalabilidad</h4>
-                  <p>Arquitectura preparada para crecer</p>
-                </div>
-              </div>
-              <div className="benefit-item">
-                <div className="benefit-icon">🛡️</div>
-                <div className="benefit-text">
-                  <h4>Fiabilidad</h4>
-                  <p>Sistema robusto con respaldos automáticos</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );

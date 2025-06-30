@@ -18,12 +18,15 @@ const Hero = () => {
       <div className="container">
         <div className="hero-content">
           <div className="hero-text animate-fadeInUp">
-            <h1 className="hero-title">
-              <span className="hero-title-main">EduCode.AI</span>
-              <span className="hero-title-subtitle">
-                Inteligencia Artificial aplicada a la educación
-              </span>
-            </h1>
+            <div className="hero-brand">
+              <img src="/logos/logo-educode.png" alt="EduCode.AI" className="hero-logo" />
+              <h1 className="hero-title">
+                <span className="hero-title-main">EduCode.AI</span>
+                <span className="hero-title-subtitle">
+                  Inteligencia Artificial aplicada a la educación
+                </span>
+              </h1>
+            </div>
             
             <p className="hero-description">
               Una aplicación móvil revolucionaria que utiliza inteligencia artificial 
@@ -48,7 +51,7 @@ const Hero = () => {
             
             <div className="hero-actions">
               <button 
-                className="btn btn-primary btn-large animate-pulse"
+                className="btn btn-primary btn-large"
                 onClick={scrollToFeatures}
               >
                 Descubrir características
