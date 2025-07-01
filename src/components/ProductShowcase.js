@@ -5,6 +5,7 @@ const ProductShowcase = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const technologies = [
     { name: 'Flutter', logo: '/logos/flutter.png', category: 'Frontend' },
@@ -28,33 +29,46 @@ const ProductShowcase = () => {
     { id: 2, src: '/app_screenshot/en1.png', alt: 'Realizar entrega 1' },
     { id: 3, src: '/app_screenshot/en2.png', alt: 'Fotografiamos la entrega' },
     { id: 4, src: '/app_screenshot/en3.png', alt: 'Procesamos la iamgen con el OCR' },
-    { id: 6, src: '/app_screenshot/en5.png', alt: 'Enviamos la solucion' },
-    { id: 7, src: '/app_screenshot/en6.png', alt: 'La I.A. evalúa la solución' },
-    { id: 8, src: '/app_screenshot/crearAct2.png', alt: 'Crear actividad como profesor' },
-    { id: 9, src: '/app_screenshot/forgot3.png', alt: 'Recuperar contraseña' }
+    { id: 5, src: '/app_screenshot/en5.png', alt: 'Enviamos la solucion' },
+    { id: 6, src: '/app_screenshot/en6.png', alt: 'La I.A. evalúa la solución' },
+    { id: 7, src: '/app_screenshot/crearAct2.png', alt: 'Crear actividad como profesor' },
+    { id: 8, src: '/app_screenshot/forgot3.png', alt: 'Recuperar contraseña' }
   ];
 
   // Auto-play carousel
   useEffect(() => {
-    if (!isAutoPlaying) return;
+    if (!isAutoPlaying || isTransitioning) return;
     
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % screenshots.length);
-    }, 4000); // Cambiar cada 4 segundos
+      handleSlideChange('next');
+    }, 4000);
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying, screenshots.length]);
+  }, [isAutoPlaying, isTransitioning]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % screenshots.length);
+  const handleSlideChange = (direction) => {
+    if (isTransitioning) return;
+    
+    setIsTransitioning(true);
+    
+    const newSlide = direction === 'next' 
+      ? (currentSlide + 1) % screenshots.length
+      : (currentSlide - 1 + screenshots.length) % screenshots.length;
+    
+    setCurrentSlide(newSlide);
+    
+    // Permitir nueva transición después de que termine la actual
+    setTimeout(() => {
+      setIsTransitioning(false);
+    }, 600); // Debe coincidir con la duración de la transición CSS
   };
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + screenshots.length) % screenshots.length);
-  };
+  const nextSlide = () => handleSlideChange('next');
+  const prevSlide = () => handleSlideChange('prev');
 
   const goToSlide = (index) => {
-    setCurrentSlide(index);
+    if (isTransitioning || index === currentSlide) return;
+    handleSlideChange(index > currentSlide ? 'next' : 'prev');
   };
 
   const openModal = (image) => {
@@ -69,13 +83,29 @@ const ProductShowcase = () => {
 
   const getVisibleSlides = () => {
     const visible = [];
-    for (let i = 0; i < 3; i++) {
-      const index = (currentSlide + i) % screenshots.length;
-      visible.push({
-        ...screenshots[index],
-        position: i
-      });
-    }
+    const totalSlides = screenshots.length;
+    
+    // Calculamos los índices de las tres imágenes que queremos mostrar
+    const prevIndex = (currentSlide - 1 + totalSlides) % totalSlides;
+    const nextIndex = (currentSlide + 1) % totalSlides;
+    
+    // Agregamos las tres imágenes en orden: anterior, actual, siguiente
+    visible.push({
+      ...screenshots[prevIndex],
+      position: 0,
+      key: `${prevIndex}-prev`
+    });
+    visible.push({
+      ...screenshots[currentSlide],
+      position: 1,
+      key: `${currentSlide}-current`
+    });
+    visible.push({
+      ...screenshots[nextIndex],
+      position: 2,
+      key: `${nextIndex}-next`
+    });
+    
     return visible;
   };
 
@@ -155,8 +185,8 @@ const ProductShowcase = () => {
               <div className="carousel-track">
                 {getVisibleSlides().map((screenshot) => (
                   <div 
-                    key={`${screenshot.id}-${screenshot.position}`}
-                    className={`carousel-slide ${screenshot.position === 1 ? 'active' : ''}`}
+                    key={screenshot.key}
+                    className={`carousel-slide ${screenshot.position === 1 ? 'active' : ''} ${isTransitioning ? 'transitioning' : ''}`}
                     style={{ 
                       transform: `translateX(${(screenshot.position - 1) * 100}%) scale(${screenshot.position === 1 ? 1 : 0.8})`,
                       zIndex: screenshot.position === 1 ? 3 : 2,
