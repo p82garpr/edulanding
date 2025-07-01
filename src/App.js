@@ -9,12 +9,14 @@ import UserTypes from './components/UserTypes';
 import About from './components/About';
 import Footer from './components/Footer';
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Analytics />
+      <SpeedInsights />
       <Hero />
       <ProductShowcase />
       <Features />
