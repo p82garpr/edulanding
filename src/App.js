@@ -8,6 +8,7 @@ import TechStack from './components/TechStack';
 import UserTypes from './components/UserTypes';
 import About from './components/About';
 import Footer from './components/Footer';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
