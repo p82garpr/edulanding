@@ -168,8 +168,6 @@ const About = () => {
             <p className="opensource-description">
               El código completo de EduCode.AI está disponible públicamente en GitHub, 
               incluyendo tanto el frontend (Flutter) como el backend (FastAPI). 
-              Esto permite a la comunidad académica revisar, contribuir y adaptar 
-              el proyecto según sus necesidades educativas.
             </p>
             <div className="github-info">
               <div className="github-icon">⭐</div>
