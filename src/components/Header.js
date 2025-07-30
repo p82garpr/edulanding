@@ -67,6 +67,14 @@ const Header = () => {
             <li>
               <button 
                 className="nav-link"
+                onClick={() => scrollToSection('documentation')}
+              >
+                Documentación
+              </button>
+            </li>
+            <li>
+              <button 
+                className="nav-link"
                 onClick={() => scrollToSection('about')}
               >
                 Acerca de
