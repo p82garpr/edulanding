@@ -36,7 +36,7 @@ const About = () => {
                 </div>
                 <div className="academic-detail">
                   <span className="detail-label">Nota:</span>
-                  <span className="detail-value">10/10 (Optando a matricula de honor)</span>
+                  <span className="detail-value">10/10 (Matrícula de Honor)</span>
                 </div>
                 <div className="academic-detail">
                   <span className="detail-label">Repositorio:</span>
